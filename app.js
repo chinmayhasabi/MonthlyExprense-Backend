@@ -8,7 +8,7 @@ const app = express();
 
 // Configure CORS middleware
 app.use(cors({
-  origin: 'http://localhost:4200', // Replace this with your Angular app's origin
+  origin: 'http://localhost:4200',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
 }));
