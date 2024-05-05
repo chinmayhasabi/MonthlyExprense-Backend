@@ -8,10 +8,10 @@ const app = express();
 
 // Configure CORS middleware
 app.use(cors({
-  origin: 'http://localhost:4200',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  allowedHeaders: 'Content-Type,Authorization',
-}));
+    origin: ['http://localhost:4200', 'https://monthlyexpensefrontend.web.app'],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+  }));  
 
 mongoose.connect(process.env.DB_URL).then(conn=>{
     console.log("Connection to DB is successful");
